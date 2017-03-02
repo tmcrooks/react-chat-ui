@@ -107,7 +107,7 @@ export default class ChatFeed extends Component {
     return (
       <div id="chat-panel" style={styles.chatPanel}>
         <div ref="chat" className="chat-history" style={styles.chatHistory}>
-          <div className="chat-messages" >
+          <div className="chat-messages", style: styles.chatMessages >
             {this._renderMessages(this.props.messages)}
           </div>
         </div>
@@ -122,6 +122,11 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flex: 1
+  },
+  chatMessages: {
+    height: 300,
+    marginRight: 200,
+    marginLeft: 200,
   },
   chatHistory: {
     flex: 1,
